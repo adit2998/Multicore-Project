@@ -47,6 +47,8 @@ for i in range(int(num_asso_cache_sets)):
 # print(num_asso_cache_sets)
 # print(cache_lines_in_set)
 
+
+
 for addr in bins:
 
     cache_set = addr[tag_bits:tag_bits+num_cache_set_bits]

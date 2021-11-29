@@ -40,12 +40,14 @@ for addr in bins:
     cache_line = int(cache_line, 2)
 
     tag = addr[:tag_bits]
-    tag = int(tag, 2)
+    # tag = int(tag, 2)
+
+    print(tag, cache_line)
     
-    if cache[cache_line][0] == -1  or cache[cache_line][1] != tag:
-        print('Miss')
-    else:
-        print('Hit')
+    # if cache[cache_line][0] == -1  or cache[cache_line][1] != tag:
+    #     print('Miss')
+    # else:
+    #     print('Hit')
 
     # Making that cache line valid
     cache[cache_line][0] = 1
