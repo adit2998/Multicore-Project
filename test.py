@@ -54,3 +54,6 @@ cores = [[CacheSet() for _ in range(num_cache_sets)] for _ in range(num_processo
 
 # print(cores[0][0].cache_blocks[0].state)
 print(cores[0][0].access_order)
+
+def test_func():
+    print('Hello world from test')
