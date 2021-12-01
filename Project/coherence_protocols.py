@@ -87,14 +87,24 @@ Directory = collections.defaultdict(DirectoryEntry)
 
 if mapping==1:
     cores = [[CacheBlock() for _ in range(num_cache_blocks)] for _ in range(num_processors)]
+    print('--------------------------------------------')    
     MSI_direct_mapping(instructions, cores, Directory, tag_bits, cache_block_bits, write_method)
+    print('--------------------------------------------')
     MESI_direct_mapping(instructions, cores, Directory, tag_bits, cache_block_bits, write_method)
+    print('--------------------------------------------')
     MOSI_direct_mapping(instructions, cores, Directory, tag_bits, cache_block_bits, write_method)
+    print('--------------------------------------------')
     MOESI_direct_mapping(instructions, cores, Directory, tag_bits, cache_block_bits, write_method)
+    print('--------------------------------------------')
 
 elif mapping==2:
     cores = [[CacheSet_Associative() for _ in range(num_cache_sets)] for _ in range(num_processors)]
+    print('--------------------------------------------')
     MSI_set_associative(instructions, cores, Directory, tag_bits, cache_set_bits, write_method)
+    print('--------------------------------------------')
     MESI_set_associative(instructions, cores, Directory, tag_bits, cache_set_bits, write_method)
+    print('--------------------------------------------')
     MOSI_set_associative(instructions, cores, Directory, tag_bits, cache_block_bits, write_method)
+    print('--------------------------------------------')
     MOESI_set_associative(instructions, cores, Directory, tag_bits, cache_block_bits, write_method)
+    print('--------------------------------------------')

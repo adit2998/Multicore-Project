@@ -6,4 +6,3 @@ def printSummary(read_misses, write_misses, read_hits, write_hits, invalidations
     print('Invalidations:       ', invalidations)
     print('Write backs:         ', write_backs)
     print('Directory transfers: ', directory_transfers)
-
